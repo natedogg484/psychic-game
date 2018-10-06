@@ -29,6 +29,7 @@ document.onkeyup = function (event) {
         attempts = 10;
         computerChoice = letters[Math.floor(Math.random() * letters.length)];
         console.log(computerChoice)
+        document.getElementById("guessed").innerHTML = ""
     }
 
     else (attempts--); {
@@ -38,6 +39,7 @@ document.onkeyup = function (event) {
             attempts = 10;
             computerChoice = letters[Math.floor(Math.random() * letters.length)];
             console.log(computerChoice)
+            document.getElementById("guessed").innerHTML = ""
 
         }
     }
