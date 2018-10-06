@@ -2,17 +2,17 @@
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 console.log(letters)
 
+var losses = 0;
+var wins = 0;
+
 
 var computerChoice = letters[Math.floor(Math.random() * letters.length)];
 console.log(computerChoice)
 
+var attempts = 10;
 
 
-var attempts = 13;
 
-
-var losses = 0;
-var wins = 0;
 
 var userGuess = "";
 
@@ -26,14 +26,18 @@ document.onkeyup = function (event) {
     if (userGuess === computerChoice) {
         alert("You win!");
         wins++;
-        location.reload(true);
+        attempts = 10;
+        computerChoice = letters[Math.floor(Math.random() * letters.length)];
+        console.log(computerChoice)
     }
 
     else (attempts--); {
         if (attempts <= 0) {
             alert("You lose!");
             losses++;
-            location.reload(true);
+            attempts = 10;
+            computerChoice = letters[Math.floor(Math.random() * letters.length)];
+            console.log(computerChoice)
 
         }
     }
